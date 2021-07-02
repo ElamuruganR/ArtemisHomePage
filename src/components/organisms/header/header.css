@@ -1,0 +1,20 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+.header-wrapper{
+    height: 70px;
+    /* border: 1px solid white; */
+    width: 1440px;
+    display: flex;
+    padding: 0px 16px;
+    /* margin: 0px 27px; */
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+@media only screen and (max-width:1440px) {
+    .header-wrapper{
+        margin: 0px
+    }
+}

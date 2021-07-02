@@ -1,0 +1,47 @@
+.menu-icon{
+    width: 24px;
+    height: 24px;
+    padding: 22px 16px 20px 0px;
+}
+.discovery-logo{
+    width: 170px;
+    height: 35px;
+}
+.img-arrow {
+    width: 100%;
+    height: 100%;
+}
+.search-icon {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 0px;
+}
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.play-btn-img {
+    width: 100px;
+    height: 70px;
+}
+.card-img {
+    height: 100%;
+    margin: 0px 15px;
+    width: 195px;
+    height: 124px;
+    border-radius: 10px;
+}
+@media only screen and (max-width:1200px) {
+    .discovery-logo{
+        width: 140px;
+        height: 28px;
+    }
+}
+@media only screen and (max-width:769px) {
+    .discovery-logo{
+        width: 110px;
+        height: 22x;
+    }
+}

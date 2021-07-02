@@ -1,0 +1,24 @@
+.navlinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 475px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+@media only screen and (max-width:1025px) {
+    
+}
+@media only screen and (max-width:868px) {
+    .navlinks {
+        width: 396px;
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .navlinks {
+        width: 300px;
+    }
+}

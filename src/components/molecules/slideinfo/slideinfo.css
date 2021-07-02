@@ -1,0 +1,110 @@
+.slide-details {
+    height: 495px;
+    /* height: 34vw; */
+    padding: 46px 20px 0px 66px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.slide-details .title {
+    font-family: "Roboto-Bold", sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #ffffff;
+    font-size: 40px;
+}
+.slide-details .info {
+    padding-top: 14px;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #9ba1a9;
+    font-family: sans-serif;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+.slide-details .btns {
+    margin: 18px 0px;
+}
+.slide-details .btns button {
+    background-color: rgb(40, 46, 61);
+    font-size: 12px;
+    color: #9ba1a9;
+    border-radius: 2px;
+    padding: 5px 8px;
+    margin-right: 8px;
+    font-family:  sans-serif;
+    border: none;
+    outline: none;
+}
+.slide-details .play-btn {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    padding-top: 14px;
+}
+.slide-details .play-btn .text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    padding-left: 18px;
+    font-family: sans-serif;
+}
+@media only screen and (max-width:1440px) {
+    .slide-details {
+        height: 34vw;
+    }
+}
+@media only screen and (max-width:1048px) {
+    .slide-details {
+        padding: 36px 20px 0px 56px;
+    }
+    .slide-details .title {
+        font-size: 30px;
+    }
+    .slide-details .info {
+        /* padding-top: 14px; */
+        font-size: 15px;
+    }
+    .slide-details .btns {
+        margin: 13px 0px;
+    }
+}
+@media only screen and (max-width:895px) {
+    .slide-details {
+        padding: 26px 20px 0px 46px;
+    }
+    .slide-details .title {
+        font-size: 20px;
+    }
+    .slide-details .info {
+        padding-top: 8px;
+        font-size: 12px;
+    }
+    .slide-details .btns {
+        margin: 10px 0px;
+    }
+}
+@media only screen and (max-width:700px) {
+    .slide-details {
+        padding: 16px 20px 0px 36px;
+    }
+    .slide-details .title {
+        font-size: 15px;
+    }
+    .slide-details .info {
+        padding-top: 4px;
+        font-size: 8px;
+    }
+    .slide-details .btns {
+        margin: 7px 0px;
+    }
+    .slide-details .btns button {
+        font-size: 8px;
+        padding: 3px 4px;
+    }
+}

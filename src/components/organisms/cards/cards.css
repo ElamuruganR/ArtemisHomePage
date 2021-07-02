@@ -1,0 +1,29 @@
+.cards-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.cards-container {
+    width: 1440px;
+    height: 164px;
+    
+    position: relative;
+    padding: 20px;
+    display: flex;
+    /* max-width: 1440px; */
+    margin: 0 auto;
+}
+.cards-carousel {
+    width: 96.2%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.cards-slider {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    /* transform: translate(-25%); */
+    position: absolute;
+}

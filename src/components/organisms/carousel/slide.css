@@ -1,0 +1,17 @@
+.slide{
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 34% 66%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.slide .slide-image {
+    height: 495px;
+    padding-right: 66px;
+}
+@media only screen and (max-width:1440px) {
+    .slide .slide-image {
+        height: 34vw;
+    }
+}

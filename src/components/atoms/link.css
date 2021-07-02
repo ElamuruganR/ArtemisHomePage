@@ -1,0 +1,28 @@
+* {
+    text-decoration: none;
+}
+.navlink{
+    padding-right: 24px;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #838991;
+}
+@media only screen and (max-width:1025px) {
+    .navlink{
+        padding-right: 19px;
+    }
+}
+@media only screen and (max-width:868px) {
+    .navlink{
+        padding-right: 12px;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width:769px) {
+    .navlink{
+        padding-right: 8px;
+        font-size: 12px;
+    }
+}

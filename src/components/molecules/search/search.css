@@ -1,0 +1,15 @@
+.search{
+    width: 448px;
+    height: 30px;
+    display: flex;
+}
+@media only screen and (max-width:1228px)  {
+    .search{
+        width: 364px;
+    }
+}
+@media only screen and (max-width:1049px)  {
+    .search{
+        width: 95px;
+    }
+}
