@@ -7,52 +7,44 @@ import RightArrow from '../../molecules/arrows/RightArrow';
 
 export default function Carousel(){
     const [index, setIndex] = useState(0);
-    const [direction, setDirection] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
+    const [prevRotate, setPrevRotate] = useState(false);
+    const [nextRotate, setNextRotate] = useState(false);
+    
     const slider = document.querySelector(".slider");
-    const carousel = document.querySelector('.carousel-container');
 
     const handleLeftClick = () => {
-        if(direction === -1) {
-            slider.appendChild(slider.firstElementChild);
-        }
+        console.log("handleLeftClick");
 
-        setDirection(1);
-        carousel.style.justifyContent = "flex-end";
-        index===0 ? setIndex(3) : setIndex(prevIndex => prevIndex-1);
+        if(index===0) {
+            setPrevRotate(true);
+            setIndex(3);
+        } else {
+            setIndex(prevIndex => prevIndex-1);
+        }
     }
 
     const handleRightClick = () => {
-        if(direction === 1) {
-            slider.prepend(slider.lastElementChild);
-        }
+        console.log("handleRightClick");
 
-        setDirection(-1);
-        carousel.style.justifyContent = "flex-start";
-        index===3 ? setIndex(0) : setIndex(prevIndex => prevIndex+1);
+        if(index===3) {
+            setNextRotate(true);
+            setIndex(0);
+        } else {
+            setIndex(prevIndex => prevIndex+1);
+        }
     }
 
     const handleIndicators = (ind) => {
+        console.log("handleIndicators");
         updateIndicators(ind);
         setIndex(ind);
     }
 
     const updateIndicators = (ind) => {
+        console.log("updateIndicators");
         document.querySelector(".controls ul li.selected").classList.remove("selected");
         document.querySelector(`.controls ul li.ind${ind}`).classList.add("selected");
-    }
-
-    const handleTransitionEnd = () => {
-        if(direction === -1) {
-            slider.appendChild(slider.firstElementChild);
-        } else if(direction === 1) {
-            slider.prepend(slider.lastElementChild);
-        }
-        slider.style.transition = 'none';
-        slider.style.transform = "translate(0)";
-        setTimeout(()=>{
-            slider.style.transition = 'all 0.5s';
-        })
     }
 
     useEffect(() => {
@@ -60,8 +52,34 @@ export default function Carousel(){
             setIsMounted(true);
             return;
         }
-        slider.style.transform = `translate(${direction===-1 ? -25 : 25}%)`;
-        updateIndicators(index);
+        let translate = index*25;
+        if(nextRotate || prevRotate) {
+            let imgSlide = document.querySelectorAll(".slide")[index];
+            slider.style.transition = "none";
+            imgSlide.style.transition = "none";
+            slider.style.transform = `translate(-${translate}%)`;
+            translate = nextRotate ? 100 : -100;
+            console.log("transform2:", translate, imgSlide);
+            imgSlide.style.transform = `translate(${translate}%)`;
+
+            const timeout = setTimeout(()=>{
+                imgSlide.style.transform = `translate(0%)`;
+                imgSlide.style.transition = "all 0.2s";
+                slider.style.transition = "all 0.3s";
+                setPrevRotate(false);
+                setNextRotate(false);
+            })
+            updateIndicators(index);
+
+            return ()=>{
+                clearTimeout(timeout);
+            };
+
+        } else {
+            slider.style.transform = `translate(-${translate}%)`;
+            updateIndicators(index);
+        }
+
     }, [index])
     
     useEffect(()=>{
@@ -73,10 +91,9 @@ export default function Carousel(){
     return(
         <div className="carousel-wrapper">
             <div className="carousel-container">
-                <div className="slider" onTransitionEnd={handleTransitionEnd} >
+                <div className="slider">
                     {
                         data.map((slideData)=>{
-                            console.log(slideData.title);
                             return (
                                 <Slide data={slideData}/>
                             )
@@ -86,9 +103,11 @@ export default function Carousel(){
                 <div className="controls">
                     <LeftArrow 
                         handleClick={handleLeftClick}
+                        containerStyle={{left:"10px"}}
                     />
                     <RightArrow 
                         handleClick={handleRightClick}
+                        containerStyle={{right:"10px"}}
                     />
                     <ul>
                         {data.map((slideData, i)=>{

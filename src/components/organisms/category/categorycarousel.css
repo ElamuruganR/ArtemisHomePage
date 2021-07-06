@@ -1,0 +1,14 @@
+.category-carousel-container{
+    display: flex;
+    justify-content: space-around;
+}
+.carousel-area {
+    width: 1440px;
+    height: 164px;
+    
+    position: relative;
+    padding: 20px;
+    display: flex;
+    /* max-width: 1440px; */
+    margin: 0 auto;
+}

@@ -5,15 +5,11 @@
     cursor: pointer;
     width: 30px;
     height: 30px;
-    transform: translateY(-50%);
-
-    
-  
-    
+    transform: translateY(-50%);  
 }
-.arrow.left {
+/* .arrow.left {
     left: 10px;
 }
 .arrow.right {
     right: 10px;
-}
+} */

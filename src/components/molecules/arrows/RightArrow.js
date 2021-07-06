@@ -2,14 +2,14 @@ import React from 'react';
 import './arrow.css';
 import Image from '../../atoms/Image';
 
-export default function RightArrow({handleClick, style}) {
+export default function RightArrow({handleClick, containerStyle, imgStyle}) {
     return(
-        <div className="arrow right">
+        <div className="arrow right" style={containerStyle}>
             <Image 
                 source="/images/carousel/next.png" 
                 altText="next" 
                 className="img-arrow"
-                style={{style}}
+                style={imgStyle}
                 handleClick= {handleClick}
             />
         </div>

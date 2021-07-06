@@ -42,5 +42,8 @@ export const cardsData = [
     {id: 7, alt: "investigation", imgSrc: "/images/cards/investigation.jpg"},
     {id: 8, alt: "lifestyle", imgSrc: "/images/cards/lifestyle.jpg"},
     {id: 9, alt: "nature", imgSrc: "/images/cards/nature.jpg"},
-    {id: 10, alt: "science", imgSrc: "/images/cards/science.jpg"}
+    {id: 10, alt: "science", imgSrc: "/images/cards/science.jpg"},
+    {id: 11, alt: "food", imgSrc: "/images/cards/food.jpg"},
+    {id: 12, alt: "investigation", imgSrc: "/images/cards/investigation.jpg"},
+    {id: 13, alt: "animals", imgSrc: "/images/cards/animals.jpg"},
 ]
