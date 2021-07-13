@@ -1,13 +1,17 @@
 .header{
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    z-index: 1;
+    background: black;
+    width: 95vw;
 }
 .header-wrapper{
     height: 70px;
     /* border: 1px solid white; */
-    width: 1440px;
+    width: 95vw;
     display: flex;
-    padding: 0px 16px;
+    /* padding: 0px 16px; */
     /* margin: 0px 27px; */
     align-items: center;
     position: relative;
@@ -16,5 +20,15 @@
 @media only screen and (max-width:1440px) {
     .header-wrapper{
         margin: 0px
+    }
+}
+@media only screen and (max-width:769px) {
+    .header{
+        width: 97vw;
+    }
+}
+@media only screen and (max-width:525px) {
+    .header{
+        width: 100vw;
     }
 }

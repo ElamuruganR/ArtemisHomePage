@@ -74,4 +74,9 @@
     .carousel-img {
         border-radius: 0px;
     }
+    .card-img {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+    }
 }

@@ -12,3 +12,8 @@
     /* max-width: 1440px; */
     margin: 0 auto;
 }
+@media only screen and (max-width:525px) {
+    .carousel-area {
+        height: 82px;
+    }
+}
