@@ -84,8 +84,8 @@ export default function Carousel(){
     
     useEffect(()=>{
         //AutoSlide
-        // let autoSlide = setTimeout(()=>{handleRightClick()}, 3000);
-        // return ()=>clearTimeout(autoSlide);
+        let autoSlide = setTimeout(()=>{handleRightClick()}, 3000);
+        return ()=>clearTimeout(autoSlide);
     })
 
     return(
