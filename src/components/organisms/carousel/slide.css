@@ -15,3 +15,15 @@
         height: 34vw;
     }
 }
+@media only screen and (max-width:525px) {
+    .slide {
+        grid-template-columns: 100%;
+        height: 350px;
+    }
+    .slide .slide-image {
+        /* padding-left: 60px; */
+        width: 525px;
+        padding: 0px;
+        height: 100%;
+    }
+}
