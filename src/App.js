@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/organisms/header/Header';
 import Carousel from './components/organisms/carousel/Carousel';
-import { CategoryCarousel } from './components/organisms/category/CategoryCarousel';
+import { CarouselGrid } from './components/organisms/category/CarouselGrid';
 import Image from './components/atoms/Image';
 import {cardsData} from './components/testdata/data';
 
@@ -11,7 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Carousel />
-      <CategoryCarousel>
+      <CarouselGrid>
         {
           cardsData.map((card) => {
               return (
@@ -23,7 +22,7 @@ function App() {
               )
           })
         }
-      </CategoryCarousel>
+      </CarouselGrid>
     </div>
   );
 }

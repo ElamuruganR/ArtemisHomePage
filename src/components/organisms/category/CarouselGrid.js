@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './categorycarousel.css'; 
+import './carouselgrid.css'; 
 import LeftArrow from '../../molecules/arrows/LeftArrow';
 import RightArrow from '../../molecules/arrows/RightArrow';
-import CarouselSlider from './CarouselSlider';
+import CarouselGridSlider from './CarouselGridSlider';
 
-export function CategoryCarousel({children}) {
+export function CarouselGrid({children}) {
     const [isMounted, setIsMounted] = useState(false);
     const [slide, setSlide] = useState(0);
     const carouselContainerRef = useRef();
@@ -42,7 +42,7 @@ export function CategoryCarousel({children}) {
         <div className="category-carousel-container">
             <div className="carousel-area">
                 <LeftArrow handleClick={handleLeftClick} containerStyle={{position:"relative"}}/>
-                <CarouselSlider ref={{carouselContainerRef, carouselSliderRef}}>{children}</CarouselSlider>
+                <CarouselGridSlider ref={{carouselContainerRef, carouselSliderRef}}>{children}</CarouselGridSlider>
                 <RightArrow handleClick={handleRightClick} containerStyle={{position:"relative", left:"13px"}}/>
             </div>
         </div>
