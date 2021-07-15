@@ -1,11 +1,11 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
-import './carousel.css';
+import React, { useEffect, useState } from 'react';
+import './herocarousel.css';
 import {carouselData as data} from '../../testdata/data.js';
 import Slide from './Slide';
 import LeftArrow from '../../molecules/arrows/LeftArrow';
 import RightArrow from '../../molecules/arrows/RightArrow';
 
-export default function Carousel(){
+export default function HeroCarousel(){
     const [index, setIndex] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
     const [prevRotate, setPrevRotate] = useState(false);

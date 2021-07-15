@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/organisms/header/Header';
-import Carousel from './components/organisms/carousel/Carousel';
+import HeroCarousel from './components/organisms/carousel/HeroCarousel';
 import { CarouselGrid } from './components/organisms/category/CarouselGrid';
 import Image from './components/atoms/Image';
 import {cardsData} from './components/testdata/data';
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Carousel />
+      <HeroCarousel />
       <CarouselGrid>
         {
           cardsData.map((card) => {
